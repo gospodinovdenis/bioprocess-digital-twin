@@ -287,7 +287,7 @@ IVCD is calculated as the integral of viable-cell concentration over time:
 
 
 IVCD =
-\int_0^T X_v(t)\,dt
+$\frac{int_0^T X_v(t)}{dt}$
 
 
 The analysis produces:
