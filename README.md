@@ -824,6 +824,3 @@ PhD, University of Houston
 
 ---
 
-## Disclaimer
-
-This project is a computational modeling demonstration using synthetic data. It is not intended for direct use in manufacturing, process control, clinical decision-making, or other regulated applications without appropriate experimental validation and qualification.
