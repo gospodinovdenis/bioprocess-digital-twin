@@ -82,11 +82,9 @@ The model represents interactions between cell growth, cell death, nutrient cons
 
 Cell growth is represented using glucose-limited Monod kinetics:
 
-$$
 \mu =
 \mu_{max}
-\frac{G}{K_G + G}
-$$
+$\frac{G}{K_G + G}$
 
 where:
 
@@ -99,11 +97,11 @@ where:
 
 ## Viable Cell Dynamics
 
-$$
+
 $\frac{dX_v}{dt}$
 =
 (\mu-k_d)X_v
-$$
+
 
 where:
 
@@ -114,11 +112,11 @@ where:
 
 ## Dead Cell Dynamics
 
-$$
+
 $\frac{dX_d}{dt}$
 =
 k_dX_v
-$$
+
 
 ---
 
@@ -126,16 +124,15 @@ $$
 
 Glucose consumption is coupled to cellular growth and glucose availability:
 
-$$
+
 $\frac{dG}{dt}$
 =
 -q_GX_v
-\left(
+
 $\frac{G}{K_G+G}$
-\right)
+
 +
 $\frac{F}{V}(G_{feed}-G)$
-$$
 
 where:
 
@@ -148,16 +145,16 @@ where:
 
 ## Lactate Dynamics
 
-$$
+
 $\frac{dL}{dt}$
 =
 q_LX_v
-\left(
+
 $\frac{G}{K_G+G}$
-\right)
+
 -
 $\frac{F}{V}L$
-$$
+
 
 where \(q_L\) represents the lactate production coefficient.
 
@@ -165,13 +162,13 @@ where \(q_L\) represents the lactate production coefficient.
 
 ## Product Formation
 
-$$
-\frac{dP}{dt}
+
+$\frac{dP}{dt}$
 =
 q_PX_v
 -
-\frac{F}{V}P
-$$
+$\frac{F}{V}P$
+
 
 where \(q_P\) represents the product formation coefficient.
 
@@ -179,9 +176,7 @@ where \(q_P\) represents the product formation coefficient.
 
 ## Reactor Volume
 
-$$
-\frac{dV}{dt}=F
-$$
+$\frac{dV}{dt}=F$
 
 The complete model is implemented in Python and numerically integrated using `scipy.integrate.solve_ivp`.
 
@@ -290,10 +285,10 @@ Process outputs evaluated include:
 
 IVCD is calculated as the integral of viable-cell concentration over time:
 
-$$
+
 IVCD =
 \int_0^T X_v(t)\,dt
-$$
+
 
 The analysis produces:
 
