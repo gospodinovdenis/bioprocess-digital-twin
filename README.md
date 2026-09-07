@@ -184,7 +184,7 @@ The complete model is implemented in Python and numerically integrated using `sc
 
 # Project Pipeline
 
-## Phase 8 — Synthetic Experimental Data
+## 1 — Synthetic Experimental Data
 
 The project begins with simulated process observations representing experimental measurements.
 
@@ -207,7 +207,7 @@ data/raw/synthetic_experimental_data.csv
 
 ---
 
-# Phase 9 — Parameter Estimation
+# 2 — Parameter Estimation
 
 The mechanistic model contains biological parameters that are not directly observed.
 
@@ -231,7 +231,7 @@ This establishes a computational workflow analogous to fitting a mechanistic pro
 
 ---
 
-# Phase 10 — Model Validation
+# 3 — Model Validation
 
 The calibrated model is simulated using the estimated parameters and compared with the experimental observations.
 
@@ -261,7 +261,7 @@ The goal is to determine whether the calibrated model adequately captures the ma
 
 ---
 
-# Phase 11 — Sensitivity Analysis
+# 4 — Sensitivity Analysis
 
 Sensitivity analysis evaluates how strongly model outputs respond to changes in biological parameters.
 
@@ -302,7 +302,7 @@ This identifies which parameters have the greatest influence on modeled process 
 
 ---
 
-# Phase 12 — Process Optimization
+# 5 — Process Optimization
 
 The calibrated model is used to explore process operating conditions.
 
@@ -339,7 +339,7 @@ This converts the model from a descriptive simulation into a **process decision-
 
 ---
 
-# Phase 13 — Interactive Digital Twin
+# 6 — Interactive Digital Twin
 
 The final application is implemented using **Streamlit** and **Plotly**.
 
