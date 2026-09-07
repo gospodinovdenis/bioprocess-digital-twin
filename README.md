@@ -500,22 +500,6 @@ bioprocess-digital-twin/
 │       ├── optimization_results.csv
 │       └── optimal_process.csv
 │
-├── src/
-│   ├── model.py
-│   ├── calibration.py
-│   ├── sensitivity.py
-│   └── optimization.py
-│
-├── notebooks/
-│   ├── 01_process_data.ipynb
-│   ├── 02_mechanistic_model.ipynb
-│   ├── 03_parameter_estimation.ipynb
-│   ├── 04_model_validation.ipynb
-│   ├── 05_process_optimization.ipynb
-│   └── 06_uncertainty_analysis.ipynb
-│
-├── dashboard/
-│   └── app.py
 │
 ├── figures/
 │   ├── model_validation.png
