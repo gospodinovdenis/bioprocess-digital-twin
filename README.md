@@ -83,7 +83,7 @@ The model represents interactions between cell growth, cell death, nutrient cons
 Cell growth is represented using glucose-limited Monod kinetics:
 
 mu =
-mu_{max}
+mu_(max)
 $\frac{G}{K_G + G}$
 
 where:
@@ -213,7 +213,7 @@ The mechanistic model contains biological parameters that are not directly obser
 
 These include:
 
-* \(\mu_{max}\)
+* (mu_(max)\)
 * \(K_G\)
 * \(k_d\)
 * \(q_G\)
