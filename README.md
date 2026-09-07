@@ -99,11 +99,11 @@ where:
 
 ## Viable Cell Dynamics
 
-$
-\frac{dX_v}{dt}
+$$
+$\frac{dX_v}{dt}$
 =
 (\mu-k_d)X_v
-$
+$$
 
 where:
 
@@ -115,7 +115,7 @@ where:
 ## Dead Cell Dynamics
 
 $$
-\frac{dX_d}{dt}
+$\frac{dX_d}{dt}$
 =
 k_dX_v
 $$
@@ -127,14 +127,14 @@ $$
 Glucose consumption is coupled to cellular growth and glucose availability:
 
 $$
-\frac{dG}{dt}
+$\frac{dG}{dt}$
 =
 -q_GX_v
 \left(
-\frac{G}{K_G+G}
+$\frac{G}{K_G+G}$
 \right)
 +
-\frac{F}{V}(G_{feed}-G)
+$\frac{F}{V}(G_{feed}-G)$
 $$
 
 where:
@@ -149,14 +149,14 @@ where:
 ## Lactate Dynamics
 
 $$
-\frac{dL}{dt}
+$\frac{dL}{dt}$
 =
 q_LX_v
 \left(
-\frac{G}{K_G+G}
+$\frac{G}{K_G+G}$
 \right)
 -
-\frac{F}{V}L
+$\frac{F}{V}L$
 $$
 
 where \(q_L\) represents the lactate production coefficient.
