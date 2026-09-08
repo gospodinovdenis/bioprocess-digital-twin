@@ -725,6 +725,114 @@ Potential additions include:
 Test the model against an independent process condition or experimental dataset.
 
 ---
+## Integrated Streamlit Dashboard + CADET-Core
+
+The project has been extended from an upstream fed-batch digital twin into an **integrated bioprocess digital twin** that combines mechanistic upstream cell-culture modeling with downstream chromatography simulation.
+
+The Streamlit application provides two interactive modules from a single dashboard:
+
+### 🧬 Upstream Reactor
+
+The **Upstream Reactor** module uses a custom mechanistic ODE model implemented with **Python and SciPy** to simulate a fed-batch mammalian cell-culture process.
+
+The model tracks:
+
+* Viable cell concentration
+* Dead cell concentration
+* Glucose consumption
+* Lactate production
+* Product formation
+* Reactor volume
+
+Users can interactively modify biological and process parameters including maximum growth rate (`μmax`), glucose half-saturation constant (`K_G`), cell death rate (`kd`), glucose consumption rate (`qG`), lactate production rate (`qL`), product formation rate (`qP`), feed rate, and feed glucose concentration.
+
+The dashboard dynamically recalculates the process trajectory and displays cell growth, metabolic profiles, product formation, reactor volume, and key process-performance metrics.
+
+### 🧪 Downstream CADET Purification
+
+The **Downstream CADET Purification** module extends the digital twin into downstream bioprocessing using **CADET-Core through CADET-Process**.
+
+The optimized upstream harvest serves as the logical input to a mechanistic chromatography capture model incorporating:
+
+* Multi-component chromatography
+* Competitive Langmuir adsorption
+* Mechanistic column transport
+* Dynamic loading and elution events
+* Product and impurity separation
+* Chromatogram generation
+* Quantitative separation analysis
+
+The Streamlit dashboard visualizes the CADET column outlet chromatogram and reports downstream performance metrics including:
+
+* Product peak time
+* Impurity peak time
+* Peak separation
+* Integrated product signal
+* Integrated impurity signal
+* Apparent product purity
+
+The chromatography parameters currently used in the demonstration are illustrative model parameters rather than experimentally fitted resin parameters.
+
+### End-to-End Digital Twin Architecture
+
+```text
+Fed-Batch Mammalian Cell Culture
+          │
+          ▼
+Mechanistic ODE Model
+Python + SciPy
+          │
+          ├── Parameter Estimation
+          ├── Model Validation
+          ├── Sensitivity Analysis
+          └── Feed Optimization
+          │
+          ▼
+Optimized Upstream Harvest
+          │
+          ▼
+CADET-Core / CADET-Process
+Chromatography Model
+          │
+          ├── Column Loading
+          ├── Competitive Binding
+          ├── Elution
+          └── Product / Impurity Separation
+          │
+          ▼
+Integrated Streamlit Dashboard
+          │
+          ├── Upstream Reactor
+          └── Downstream CADET Purification
+```
+
+### Technologies
+
+**Modeling & Optimization:** Python, NumPy, SciPy, mechanistic ODE modeling, parameter estimation, sensitivity analysis, process optimization
+
+**Downstream Process Modeling:** CADET-Core, CADET-Process, mechanistic chromatography, competitive Langmuir adsorption
+
+**Visualization & Application:** Streamlit, Plotly, Pandas
+
+### What This Extension Demonstrates
+
+This extension demonstrates the ability to move beyond a standalone mathematical model and construct an integrated computational bioprocess workflow spanning both **upstream and downstream process development**.
+
+The project demonstrates experience with:
+
+* First-principles mechanistic modeling
+* Dynamic bioprocess simulation
+* Parameter estimation and model validation
+* Process sensitivity analysis
+* Feed-strategy optimization
+* CADET-Core process simulation
+* Mechanistic chromatography modeling
+* Upstream/downstream model integration
+* Interactive scientific application development
+* Digital-twin concepts for bioprocess development
+
+The result is an end-to-end portfolio project demonstrating how mechanistic modeling, process optimization, and specialized bioprocess simulation tools can be combined into an interactive **bioprocess digital twin**.
+
 
 # Why This Project Matters
 
