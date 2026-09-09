@@ -1,0 +1,6 @@
+parameter,fitted_value
+mu_max,0.03
+K_G,1.0
+kd,0.003
+qG,0.05
+qP,0.01
