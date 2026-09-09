@@ -264,16 +264,23 @@ else:
         outlet_path = REAL_CADET_OUTLET_PATH
         metrics_path = REAL_CADET_METRICS_PATH
         st.success("Displaying CADET-generated results from the deployed data files.")
-    else:
+    elif DEMO_CADET_OUTLET_PATH.exists() and DEMO_CADET_METRICS_PATH.exists():
         outlet_path = DEMO_CADET_OUTLET_PATH
         metrics_path = DEMO_CADET_METRICS_PATH
-        st.warning(
-            "Portfolio preview mode: the displayed downstream curves are an "
-            "illustrative demonstration dataset, not a CADET-Core execution on "
-            "the Streamlit server. Replace the demo files with "
-            "`cadet_capture_outlet.csv` and `cadet_capture_metrics.csv` generated "
-            "by the CADET notebook to display real CADET results."
+        st.info(
+            "CADET preview mode: real CADET output CSVs are not deployed yet, "
+            "so the app is displaying the included illustrative downstream dataset. "
+            "Once `cadet_capture_outlet.csv` and `cadet_capture_metrics.csv` are added "
+            "to `data/processed/`, the app will switch to them automatically."
         )
+    else:
+        st.error(
+            "No downstream data files were found. Make sure the repository contains "
+            "`data/processed/demo_cadet_capture_outlet.csv` and "
+            "`data/processed/demo_cadet_capture_metrics.csv`, or add the real "
+            "CADET-generated result files."
+        )
+        st.stop()
 
     if not outlet_path.exists() or not metrics_path.exists():
         st.error("Downstream result files are missing from data/processed.")
