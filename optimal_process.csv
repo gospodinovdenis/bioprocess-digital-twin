@@ -1,2 +1,2 @@
-baseline_feed_rate,optimal_feed_rate,baseline_final_product,optimal_final_product,product_improvement_percent,optimal_final_viable_cells,optimal_final_lactate,optimal_final_glucose,optimal_final_volume,optimal_IVCD
-0.01,0.006999999999999999,7.04651811096645,7.085456070102486,0.5525843902314997,20.045381911180097,14.147171682829013,1.982528566311153,1.84,810.7821139065352
+optimal_feed_rate,optimal_final_product,note
+0.01,1.0,Placeholder deploy value; replace with notebook optimization output.
