@@ -111,6 +111,7 @@ where:
 ## Dead Cell Dynamics
 
 Dead cells accumulate as viable cells undergo cell death:
+
 $$
 \mu = \mu_{\max}\frac{G}{K_G + G}
 $$
