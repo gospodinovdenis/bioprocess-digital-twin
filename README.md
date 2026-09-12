@@ -127,7 +127,6 @@ where:
 
 Glucose consumption is coupled to cellular growth and glucose availability:
 
-
 $$
 \frac{dG}{dt}
 =
@@ -204,26 +203,6 @@ where:
 
 - \(V\) = reactor volume
 - \(F\) = feed rate
-
-## Complete Mechanistic Model
-
-The complete fed-batch model is therefore:
-
-$$
-\boxed{
-\begin{aligned}
-\mu &= \mu_{\max}\frac{G}{K_G+G} \\[4pt]
-\frac{dX_v}{dt} &= (\mu-k_d)X_v \\[4pt]
-\frac{dX_d}{dt} &= k_dX_v \\[4pt]
-\frac{dG}{dt} &=
--q_GX_v\frac{G}{K_G+G}
-+\frac{F}{V}(G_{\mathrm{feed}}-G) \\[4pt]
-\frac{dL}{dt} &= q_LX_v-\frac{F}{V}L \\[4pt]
-\frac{dP}{dt} &= q_PX_v-\frac{F}{V}P \\[4pt]
-\frac{dV}{dt} &= F
-\end{aligned}
-}
-$$
 
 The coupled ordinary differential equations are implemented in Python and
 numerically integrated using `scipy.integrate.solve_ivp`.
