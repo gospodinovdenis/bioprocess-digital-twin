@@ -88,8 +88,8 @@ $$
 
 where:
 
-- $\mu$ = specific growth rate
-- $\mu_{\max}$ = maximum specific growth rate
+- $(\mu)$ = specific growth rate
+- $(\mu_{\max})$ = maximum specific growth rate
 - \(G\) = glucose concentration
 - \(K_G\) = glucose half-saturation constant
 
