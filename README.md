@@ -98,7 +98,7 @@ where:
 ## Viable Cell Dynamics
 
 
-$\frac{dX_v}{dt}$=$\(mu-k_d)X_v$
+$\frac{dX_v}{dt}$ = $\{mu-k_d}{X_v}$
 
 
 where:
