@@ -228,7 +228,7 @@ The mechanistic model contains biological parameters that are not directly obser
 
 These include:
 
-* (mu_(max)\)
+* $(\mu_{\max})$
 * \(K_G\)
 * \(k_d\)
 * \(q_G\)
