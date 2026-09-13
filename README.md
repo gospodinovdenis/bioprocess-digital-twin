@@ -137,7 +137,7 @@ where:
 - \(G\) = glucose concentration
 - \(K_G\) = glucose half-saturation constant
 - \(F\) = feed rate
-- \(G_{\mathrm{feed}}\) = glucose concentration in the feed
+- \(G_{\{feed}}\) = glucose concentration in the feed
 - \(V\) = reactor volume
 
 ---
