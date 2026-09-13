@@ -113,7 +113,7 @@ where:
 Dead cells accumulate as viable cells undergo cell death:
 
 $$
-\mu = \mu_{\max}\frac{G}{K_G + G}
+\frac{dX_d}{dt} = k_d X_v
 $$
 
 where:
